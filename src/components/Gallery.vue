@@ -15,7 +15,7 @@
   </p>
     </div>
     <div class="gallery">
-   <vueper-slides fade :touchable="false" :autoplay="true" :interval="4500">
+   <vueper-slides fade :touchable="true" :autoplay="true" :interval="4500">
   <vueper-slide
     v-for="(slide, i) in slides"
     :key="i"

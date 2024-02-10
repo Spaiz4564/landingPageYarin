@@ -3,7 +3,7 @@
     <div class="contact_container">
       <div class="image"></div>
       <div class="text">
-        <h1>לייעוץ מקצועי מלאו פרטים בטופס</h1>
+        <h1>למענה מהיר התקשרו: <br> <span>054-6699285</span></h1>
         <p>אני מאמין ביחס רפואי אישי המעניק תחושת ביטחון למטופל, המטרה שלי היא לאפשר לכם לאכול ולחייך בחזרה.</p>
         <form class="form" @submit.prevent="submitForm" method="POST">
           <div class="inputs">

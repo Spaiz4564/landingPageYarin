@@ -33,6 +33,10 @@
         @include mqRange(mobile, sLaptop) {
           margin-bottom: 2rem;
         }
+
+        @include mq(mobile) {
+          font-size: 4.6rem;
+        }
       }
 
       .subtitle {
