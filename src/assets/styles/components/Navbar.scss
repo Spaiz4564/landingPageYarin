@@ -1,0 +1,146 @@
+.navbar_container {
+  display: flex;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
+  height: 9rem;
+  z-index: 10;
+
+  .hamburger, .close_modal{
+    display: none;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+
+    @include mqRange(mobile, tablet) {
+      display: block;
+    }
+
+    @include mq(mobile){
+       width: 3.5rem;
+    height: 3.5rem;
+    top: 30px;
+    }
+  }
+
+.header_container{
+  position: fixed;
+  height: inherit;
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
+  padding: 0 4rem;
+
+  @include mqRange(mobile, tablet){
+    padding: 0 2rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1650px;
+    margin: auto;
+    background: white;
+    inset: 0;
+    height: inherit;
+
+    .name {
+      font-size: 3rem;
+      position: relative;
+
+      @include mq(sLaptop) {
+         font-size: 2.5rem;
+      }
+
+      @include mq(mobile){
+        font-size: 2.6rem;
+      }
+
+    }
+
+    .navbar_container {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+
+      .nav_link {
+        color: #545455;
+        font-size: 1.8rem;
+        position: relative;
+        cursor: pointer;
+
+        @include mq(sLaptop) {
+          font-size: 1.5rem;
+        }
+
+        &:hover::after {
+          border-color: rgb(255 217 192);
+          width: 90px;
+          transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+
+          @include mq(sLaptop) {
+            width: 70px;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 2rem;
+          right: 50%;
+          transform: translate(50%);
+          padding: 0 0 8px;
+          width: 48px;
+          border-bottom: 2px solid rgb(255 217 192);
+          transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .number {
+      position: relative;
+      padding: 0 1rem;
+      font-size: 1.5em;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+
+      @include mq(sLaptop) {
+        font-size: 1.3em;
+      }
+
+      &:hover {
+        color: #333;
+      }
+
+      &::after {
+        position: absolute;
+        top: -22%;
+        right: -20px;
+        height: 130%;
+        width: 1.8px;
+        background-color: rgb(255, 217, 192);
+        content: "";
+      }
+    }
+
+    @include mqRange(mobile, tablet) {
+    .navbar_container{
+        display: none;
+      }
+
+    .number{
+      display: none;
+      }
+    }
+
+
+
+  }
+}
+
+
+}

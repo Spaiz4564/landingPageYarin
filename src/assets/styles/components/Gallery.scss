@@ -1,0 +1,81 @@
+.gallery_section {
+  background-color: rgba(255, 217, 192, 0.12);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
+  margin: auto;
+  padding: 8rem 4rem;
+
+  .gallery_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 165rem;
+    margin: auto;
+
+    @include mqRange(mobile, sLaptop) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .info {
+      width: 40%;
+
+      @include mqRange(mobile, sLaptop) {
+        max-width: 65rem;
+        width: auto;
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 5rem;
+        margin-bottom: 1.2rem;
+
+        @include mqRange(mobile, sLaptop) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .subtitle {
+        margin-bottom: 1.5rem;
+      }
+
+      .text {
+        font-size: 1.17em;
+        line-height: 2.9rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .gallery {
+      width: 45rem;
+
+        @include mq(tablet) {
+        width: 72%;
+      }
+
+    @include mq(mobile) {
+      width: 100%;
+    }
+
+      .vueperslides__parallax-wrapper {
+        padding: 0 !important;
+        height: 45rem;
+        margin: auto;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 2rem 0;
+
+        @include mq(mobile) {
+          padding: 50% 50% !important;
+          height: auto;
+        }
+
+        .vueperslide {
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+

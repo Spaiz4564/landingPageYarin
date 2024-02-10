@@ -1,0 +1,108 @@
+.hero_container {
+  position: relative;
+  padding-top: 9rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
+  background-image: url('./../img/dentures.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 86%;
+  padding: 4rem;
+
+  @include mqRange(mobile, tablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(252, 232, 219, 0.29);
+    }
+  }
+
+  @include mq(mobile) {
+    padding: 3rem;
+      &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color:rgb(251 242 236 / 42%);
+    }
+  }
+
+  .background_image {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero {
+    display: flex;
+    max-width: 1650px;
+    margin: auto;
+
+    .intro_container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      max-width: 53rem;
+      margin: 13rem 0 13rem auto;
+      gap: 2.5rem;
+      position: relative;
+
+      @include mq(sLaptop) {
+        max-width: 50rem;
+        margin: 10rem 0 10rem auto;
+      }
+
+      @include mqRange(mobile, tablet) {
+        margin: 8rem auto;
+        max-width: fit-content;
+        text-align: center;
+        width: auto;
+        padding: 4rem;
+        align-items: center;
+      }
+
+      @include mq(mobile) {
+        margin: 0;
+        padding: 3rem 0;
+      }
+
+      .title {
+        font-size: 6rem;
+        line-height: 6.6rem;
+        letter-spacing: 0.15rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+        @include mq(sLaptop) {
+          font-size: 5.4rem;
+          line-height: 5.2rem;
+          letter-spacing: 0.1rem;
+        }
+
+        @include mq(mobile){
+          font-size: 4rem;
+          line-height: 4.3rem;
+          letter-spacing: 0.11rem;
+        }
+      }
+
+      .text {
+        font-family: 'Heebo-Regular';
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        color: black;
+        line-height: 2.8rem;
+        font-size: 2rem;
+        direction: rtl;
+
+        @include mqRange(mobile, sLaptop) {
+          font-size: 2.2rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+}

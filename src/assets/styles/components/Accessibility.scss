@@ -1,0 +1,53 @@
+.accessibility_container{
+
+ .settings_modal{
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  right: 20px;
+  background-color: white;
+   padding: 1.7rem;
+  border: 1px solid gray;
+box-shadow: rgba(0, 0, 0, 0.1) -4px 4px 8px, rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  width: 17rem;
+  border-radius: 6px;
+bottom: 180px;
+
+&.open{
+ display: flex;
+}
+
+  .title{
+font-weight: bold;
+font-size: 2rem;
+  }
+
+  .modal_tip{
+    position: absolute;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    right: 24px;
+    bottom: -8px;
+    transform: rotate(45deg);
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+
+  .settings{
+
+   .setting{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.3rem;
+    cursor: pointer;
+
+    &:hover{
+     text-decoration: underline;
+     text-underline-offset: 4px;
+    }
+   }
+  }
+ }
+}

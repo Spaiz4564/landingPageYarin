@@ -1,0 +1,168 @@
+.dentures_section {
+  padding: 8rem 4rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 2px;
+
+  .title {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .triangle {
+    height: auto;
+    width: 12px;
+    background: linear-gradient(
+      to left,
+      rgba(255, 217, 192, 0.76) 50%,
+      rgba(255, 217, 192, 0.76) 0
+    );
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    @include mqRange(mobile, sLaptop) {
+      width: 100%;
+      height: 0.5rem;
+    }
+  }
+
+  .dentures_container {
+    display: flex;
+    max-width: 165rem;
+    margin: auto;
+    margin-top: 8rem;
+    gap: 6.5rem;
+
+    @include mqRange(mobile, sLaptop) {
+      flex-direction: column;
+      margin-top: 5rem;
+    }
+
+    .dentures {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      @include mqRange(mobile, sLaptop) {
+        align-items: center;
+        width: auto;
+      }
+
+      @include mq(tablet) {
+        padding: 2rem 2rem;
+      }
+
+      .info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.5rem;
+
+        @include mq(sLaptop) {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 4rem;
+        }
+
+        @include mqRange(mobile, tablet) {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 3.5rem;
+        }
+
+        .denture_item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          gap: 2rem;
+
+          @include mq(mobile) {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .square_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 8rem;
+            height: 8rem;
+            max-height: 8rem;
+            border-radius: 12px;
+            background-color: black;
+            background: rgba(255, 217, 192, 0.76);
+
+            &.implant {
+              img {
+                max-width: 4.8rem;
+                max-height: 4.8rem;
+              }
+            }
+
+            img {
+              max-width: 6.5rem;
+              max-height: 6.5rem;
+            }
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            @include mq(mobile){
+              align-items: center;
+            }
+          }
+
+          .denture_info{
+             @include mq(mobile){
+              text-align: center;
+            }
+          }
+
+          .denture_name {
+            font-family: 'Heebo-Medium';
+            font-size: 2rem;
+            position: relative;
+
+            @include mq(mobile){
+              margin-bottom: 1.2rem;
+              &:after{
+                content: "";
+    position: absolute;
+    top: 2rem;
+    right: 50%;
+    transform: translate(50%);
+    padding: 0 0 8px;
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 217, 192);
+    transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+
+      .details {
+        font-size: 2rem;
+        max-width: 78rem;
+        margin-bottom: 2rem;
+        max-width: 74rem;
+
+        @include mqRange(mobile, sLaptop) {
+          margin-bottom: 6rem;
+          text-align: center;
+          max-width: 60rem;
+        }
+      }
+
+      .sub_details {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+
+        @include mqRange(mobile, sLaptop) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

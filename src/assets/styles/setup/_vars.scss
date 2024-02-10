@@ -1,0 +1,71 @@
+$breakPoints: (
+  'mobile': (
+    'min': 0px,
+    'max': 599px
+  ),
+  'sTablet': (
+    'min': 600px,
+    'max': 767px
+  ),
+  'tablet': (
+    'min': 768px,
+    'max': 1000px
+  ),
+  'sLaptop': (
+    'min': 1024px,
+    'max': 1279px
+  ),
+  'laptop': (
+    'min': 1280px,
+    'max': 1535px
+  ),
+  'desktop': (
+    'min': 1536px,
+    'max': none
+  )
+);
+
+@mixin mq($breakPoint) {
+  @if $breakPoint == mobile {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $breakPoint == sTablet {
+    @media (min-width: 600px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakPoint == tablet {
+    @media (min-width: 768px) and (max-width: 1000px) {
+      @content;
+    }
+  } @else if $breakPoint == sLaptop {
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      @content;
+    }
+  } @else if $breakPoint == laptop {
+    @media (min-width: 1280px) and (max-width: 1535px) {
+      @content;
+    }
+  } @else if $breakPoint == desktop {
+    @media (min-width: 1536px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin mqRange($breakPointStart, $breakPointEnd) {
+  $selectedStartBreakpoint: map-get($breakPoints, $breakPointStart);
+  $selectedEndBreakpoint: map-get($breakPoints, $breakPointEnd);
+
+  @if ($breakPointEnd == 'desktop') {
+    @media (min-width: map-get($selectedStartBreakpoint,'min')) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($selectedStartBreakpoint,'min')) and (max-width: map-get($selectedEndBreakpoint, 'max')) {
+      @content;
+    }
+  }
+}

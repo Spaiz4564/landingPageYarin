@@ -1,0 +1,19 @@
+// SETUP
+@import 'setup/vars';
+@import 'setup/mixins';
+@import 'setup/typography';
+
+// BASICS
+@import 'basics/base';
+@import 'basics/layout';
+
+// COMPONENTS;
+@import 'components/Navbar.scss';
+@import 'components/Hero.scss';
+@import 'components/Services.scss';
+@import 'components/AboutMe.scss';
+@import 'components/Dentures.scss';
+@import 'components/Contact.scss';
+@import 'components/Gallery.scss';
+@import 'components/SideModal.scss';
+@import 'components/Accessibility.scss';
