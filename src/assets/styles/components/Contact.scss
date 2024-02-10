@@ -53,7 +53,6 @@
         @include mq(mobile) {
           font-size: 3.2rem;
         }
-
       }
 
       p {
@@ -115,7 +114,7 @@
               }
 
               @include mq(mobile){
-              padding: 0.8rem;
+                padding: 0.8rem;
               }
             }
 
@@ -144,13 +143,20 @@
           margin: auto;
           width: 100%;
 
+          .btn_text {
+            transition: all 0.2s;
+            &.loading {
+              opacity: 0;
+            }
+          }
+
           @include mq(sLaptop) {
             max-width: 30rem;
           }
 
           &:hover {
-            background-color: #fff;
-            color: #555;
+            background-color: #684230;
+            color: #fff;
           }
         }
       }
@@ -173,11 +179,10 @@
       }
 
       @include mq(mobile){
-      min-width: auto;
-      width: 100%;
-      padding: 37%;
-
-     border-radius: 12px 12px 0 0;
+        min-width: auto;
+        width: 100%;
+        padding: 37%;
+        border-radius: 12px 12px 0 0;
       }
     }
   }
