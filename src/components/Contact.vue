@@ -1,9 +1,9 @@
 <template>
   <section id="contact" class="contact_section" v-scroll-reveal="{ reset: false, duration: 1850, origin: 'bottom', distance: '20px' }">
     <div class="contact_container">
-      <div class="image"></div>
+      <google-map/>
       <div class="text">
-        <h1>למענה מהיר התקשרו: <br> <span>054-6699285</span></h1>
+        <h1>למענה מהיר התקשרו: <span>054-6699285</span></h1>
         <p>אני מאמין ביחס רפואי אישי המעניק תחושת ביטחון למטופל, המטרה שלי היא לאפשר לכם לאכול ולחייך בחזרה.</p>
         <form class="form" @submit.prevent="submitForm" method="POST">
           <div class="inputs">
@@ -29,9 +29,11 @@
 <script>
 import { createScrollRevealDirective } from 'vue-scroll-reveal';
 import axios from 'axios';
+import GoogleMap from './GoogleMap';
 
 export default {
   name: 'ContactSection',
+  components: {GoogleMap},
   directives: {
     'scroll-reveal': createScrollRevealDirective(),
   },
