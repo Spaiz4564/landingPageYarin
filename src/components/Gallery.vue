@@ -41,11 +41,16 @@ export default {
   },
  data() {
   return {
-   slides: [
-    { image: require('../assets/img/gallery/cut3.png') },
-    { image: require('../assets/img/gallery/cut4.png') },
-    { image: require('../assets/img/gallery/cut5.png') },
-    { image: require('../assets/img/gallery/gallery1.jpg') },
+    slides: [
+    { image: require('../assets/img/gallery/1.jpg') },
+    { image: require('../assets/img/gallery/2.jpg') },
+    { image: require('../assets/img/gallery/3.jpg') },
+    { image: require('../assets/img/gallery/4.jpg') },
+    { image: require('../assets/img/gallery/5.png') },
+    { image: require('../assets/img/gallery/6.png') },
+    { image: require('../assets/img/gallery/7.png') },
+
+
    ]
   }
 }
