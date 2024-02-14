@@ -3,7 +3,6 @@
     <div :class="['side_modal', {'open': showModal}]">
       <ul class="nav_links">
         <a v-for="link in navLinks" class="link" :key="link" @click="scrollToSection(link.href)">{{ link.text }}</a>
-        <li class="number" >0546699285</li>
       </ul>
     </div>
   </div>

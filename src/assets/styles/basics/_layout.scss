@@ -21,24 +21,39 @@
   position: relative;
   text-align: start;
 
-  .whatsapp, .widget{
-    position: fixed;
-    cursor: pointer;
-    transition: all 0.3s;
-    right: 20px;
-    bottom: 20px;
-    max-width: 6.5rem;
-    max-height: 6.5rem;
-    z-index: 20;
+.whatsapp, .widget {
+  position: fixed;
+  cursor: pointer;
+  transition: all 0.3s;
+  right: 20px;
+  bottom: 20px;
+  max-width: 6.5rem;
+  max-height: 6.5rem;
+  z-index: 20;
 
-    &:hover{
+  &:hover {
     max-width: 7rem;
     max-height: 7rem;
+  }
+
+  @include mq(mobile) {
+    max-width: 5.5rem;
+    max-height: 5.5rem;
+
+    &:hover {
+      max-width: 6rem;
+      max-height: 6rem;
     }
   }
+}
+
 
 .widget{
   bottom: 90px;
+
+  @include mq(mobile) {
+    bottom: 80px;
+  }
 }
 
 }
@@ -97,4 +112,9 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+
+
+
+
+
 
