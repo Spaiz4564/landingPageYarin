@@ -3,7 +3,7 @@
    <div class="gallery_container">
     <div class="info">
      <h1 class="title">מקרים לדוגמא</h1>
-     <h3 class="subtitle">תוצאות מדהימות שישאירו לכם חיוך וביטחון</h3>
+     <!-- <h3 class="subtitle">תוצאות מדהימות שישאירו לכם חיוך וביטחון</h3> -->
      <p class="text">
   אני מאמין במראה טבעי, לכן אפשר לראות במקרים המוצגים צביעות מיוחדות המעתיקות את הצבע הטבעי בשאר השיניים של המטופל.
       </p>
@@ -46,8 +46,8 @@ export default {
     { image: require('../assets/img/gallery/2.jpg') },
     { image: require('../assets/img/gallery/3.jpg') },
     { image: require('../assets/img/gallery/4.jpg') },
-    { image: require('../assets/img/gallery/5.png') },
-    { image: require('../assets/img/gallery/6.png') },
+    { image: require('../assets/img/gallery/5.svg') },
+    { image: require('../assets/img/gallery/6.svg') },
     { image: require('../assets/img/gallery/7.png') },
 
 
