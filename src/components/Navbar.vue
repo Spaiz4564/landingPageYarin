@@ -6,7 +6,7 @@
     <div class="navbar_container">
       <a v-for="link in navLinks" class="nav_link" :key="link.text" @click="scrollToSection(link.href)">{{ link.text }}</a>
     </div>
-  <a class="number" :href="'tel:' + phoneNumber">054-6699285</a>
+  <a class="number" :href="'tel:' + phoneNumber">08-9331193</a>
     </div>
     </div>
     <img v-if="!showModal" class="hamburger" @click="this.$emit('openModal')"  src="../assets/img/hamburger.png" alt="">

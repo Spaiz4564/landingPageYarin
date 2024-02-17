@@ -3,7 +3,7 @@
     <div class="contact_container">
       <google-map/>
       <div class="text">
-        <h1>למענה מהיר התקשרו: <span>054-6699285</span></h1>
+        <h1>למענה מהיר התקשרו: <span>08-9331193</span></h1>
         <h2>נס ציונה, קמפוס יובלים, בנין D, קומה 1.</h2>
         <form class="form" @submit.prevent="submitForm" method="POST">
           <div class="inputs">
@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     btnText() {
-      return this.submitted ? 'פנייתך התקבלה בהצלחה' : 'חזרו אליי';
+      return this.submitted ? 'פנייתך התקבלה בהצלחה' : 'שליחה';
     }
   },
   methods: {
