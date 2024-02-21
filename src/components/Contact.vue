@@ -3,7 +3,7 @@
     <div class="contact_container">
       <google-map/>
       <div class="text">
-        <h1>למענה מהיר התקשרו: <span>08-9331193</span></h1>
+        <h1>למענה מהיר התקשרו: <a :href="'tel:' + phoneNumber">08-9331193</a></h1>
         <h2>נס ציונה, קמפוס יובלים, בנין D, קומה 1.</h2>
         <form class="form" @submit.prevent="submitForm" method="POST">
           <div class="inputs">
@@ -41,6 +41,7 @@ export default {
     return {
       loading: false,
       submitted: false,
+      phoneNumber: '08-9331193',
       formData: {
         fullName: '',
         number: ''

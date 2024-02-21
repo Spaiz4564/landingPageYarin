@@ -34,7 +34,7 @@ export default {
         { text: 'גלריה', href: '#gallery' },
         { text: 'צור קשר', href: '#contact' },
       ],
-      phoneNumber: '0546699285',
+      phoneNumber: '08-9331193',
     };
   },
   methods: {
