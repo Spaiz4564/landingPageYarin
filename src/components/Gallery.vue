@@ -52,7 +52,7 @@ export default {
     { image: require('../assets/img/gallery/8.png') },
     { image: require('../assets/img/gallery/9.png') },
     { image: require('../assets/img/gallery/10.png') },
-    { image: require('../assets/img/gallery/11.png') },
+    // { image: require('../assets/img/gallery/11.png') },
 
 
    ]
