@@ -7,7 +7,6 @@
   <gallery/>
   <contact/>
   <whats-app/>
-  <accessibility/>
 </div>
 </template>
 
@@ -19,11 +18,11 @@ import Dentures from '../components/Dentures'
 import Contact from '../components/Contact'
 import Gallery from '../components/Gallery'
 import WhatsApp from '../components/Whatsapp'
-import Accessibility from '../components/Accessibility.vue'
+
 
 export default {
   name: 'HomePage',
-  components: {Hero, Services, AboutMe, Dentures, Contact, Gallery, WhatsApp, Accessibility }
+  components: {Hero, Services, AboutMe, Dentures, Contact, Gallery, WhatsApp }
 }
 </script>
 <style>
