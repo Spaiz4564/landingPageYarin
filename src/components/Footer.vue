@@ -6,7 +6,7 @@
       rel="noopener"
       class="footer-link"
     >
-      הצהרת נגישות
+      מדיניות פרטיות
     </a>
   </footer>
 </template>
