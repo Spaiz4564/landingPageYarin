@@ -1,19 +1,29 @@
 <template>
   <footer class="footer">
-    <a
-      href="https://spaiz4564.github.io/YarinPrivacy/"
-      target="_blank"
-      rel="noopener"
-      class="footer-link"
-    >
-      מדיניות פרטיות
-    </a>
+    <div class="footer-content">
+      <a
+        href="https://spaiz4564.github.io/YarinPrivacy/"
+        target="_blank"
+        rel="noopener"
+        class="footer-link"
+      >
+        מדיניות פרטיות
+      </a>
+      <div class="copyright">
+        © {{ currentYear }} כל הזכויות שמורות לירין שילון
+      </div>
+    </div>
   </footer>
 </template>
 
 <script>
 export default {
   name: "AppFooter",
+  computed: {
+    currentYear() {
+      return new Date().getFullYear();
+    },
+  },
 };
 </script>
 
@@ -28,6 +38,13 @@ export default {
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
   letter-spacing: 0.02em;
   direction: rtl;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .footer-link {
@@ -46,5 +63,23 @@ export default {
   background: #f0f7ff;
   text-decoration: underline;
   outline: none;
+}
+
+.copyright {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 0.75rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
 }
 </style>
