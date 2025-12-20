@@ -134,6 +134,12 @@ export default {
         .then((response) => {
           this.submitted = true;
           console.log("Form submitted successfully:", response.data);
+          // Track Google Analytics conversion
+          if (typeof window.gtag === "function") {
+            window.gtag("event", "conversion", {
+              send_to: "AW-17665671166/vBgQCOax1NMbEP7_0udB",
+            });
+          }
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
