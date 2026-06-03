@@ -46,19 +46,24 @@
     inset: 0;
     height: inherit;
 
-    .name {
+    .logo {
       cursor: pointer;
-      font-size: 3rem;
-      position: relative;
+      display: flex;
+      align-items: center;
 
-      @include mq(sLaptop) {
-         font-size: 2.5rem;
+      img {
+        height: 6.5rem;
+        width: auto;
+        display: block;
+
+        @include mq(sLaptop) {
+          height: 5.5rem;
+        }
+
+        @include mq(mobile) {
+          height: 4.5rem;
+        }
       }
-
-      @include mq(mobile){
-        font-size: 2.6rem;
-      }
-
     }
 
     .navbar_container {

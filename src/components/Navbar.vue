@@ -2,7 +2,9 @@
   <nav class="navbar_container">
     <div class="header_container">
   <div class="header">
-  <h1 class="name" @click="scrollToSection('#hero')">ד"ר ירין שילון</h1>
+  <div class="logo" @click="scrollToSection('#hero')">
+    <img src="../assets/img/navbar-logo.png" alt="ד״ר ירין שילון - אסתטיקה דנטלית" />
+  </div>
     <div class="navbar_container">
       <a v-for="link in navLinks" class="nav_link" :key="link.text" @click="scrollToSection(link.href)">{{ link.text }}</a>
     </div>
